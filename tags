@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CHAT_MESSAGE_HPP	chat_message.hpp	2;"	d
+Connection	Connection.cpp	/^Connection::Connection(boost::asio::io_service& io_service, const tcp::endpoint& endpoint):io_service_(io_service), acceptor_(io_service, endpoint)$/;"	f	class:Connection
+Connection	Connection.hpp	/^class Connection$/;"	c
+Paticipant	Paticipant.hpp	/^class Paticipant$/;"	c
+Room	Room.hpp	/^class Room$/;"	c
+Session	Session.cpp	/^Session::Session(boost::asio::io_service& io_service, Room& room):socket_(io_service), room_(room)$/;"	f	class:Session
+Session	Session.hpp	/^class Session: public Paticipant, public boost::enable_shared_from_this<Session>$/;"	c
+acceptor_	Connection.hpp	/^		tcp::acceptor acceptor_;$/;"	m	class:Connection
+body	chat_message.hpp	/^	char* body()$/;"	f	class:chat_message
+body	chat_message.hpp	/^	const char* body() const$/;"	f	class:chat_message
+body_length	chat_message.hpp	/^	size_t body_length() const$/;"	f	class:chat_message
+body_length	chat_message.hpp	/^	void body_length(size_t length)$/;"	f	class:chat_message
+body_length_	chat_message.hpp	/^	size_t body_length_;$/;"	m	class:chat_message
+chat_message	chat_message.hpp	/^	chat_message() : body_length_(0) { }$/;"	f	class:chat_message
+chat_message	chat_message.hpp	/^class chat_message$/;"	c
+chat_message_queue	Paticipant.hpp	/^		typedef std::deque<chat_message> chat_message_queue;$/;"	t	class:Paticipant
+connection_ptr	main.cpp	/^typedef boost::shared_ptr<Connection> connection_ptr;$/;"	t	file:
+connection_ptr_list	main.cpp	/^typedef std::list<connection_ptr> connection_ptr_list;$/;"	t	file:
+data	chat_message.hpp	/^	char* data()$/;"	f	class:chat_message
+data	chat_message.hpp	/^	const char* data() const$/;"	f	class:chat_message
+data_	chat_message.hpp	/^	char data_[header_length + max_body_length];$/;"	m	class:chat_message
+decode_header	chat_message.hpp	/^	bool decode_header()$/;"	f	class:chat_message
+deliver	Room.cpp	/^void Room::deliver(const chat_message &msg)$/;"	f	class:Room
+deliver	Session.cpp	/^void Session::deliver(const chat_message& msg)$/;"	f	class:Session
+encode_header	chat_message.hpp	/^	void encode_header()$/;"	f	class:chat_message
+handle_accept	Connection.cpp	/^void Connection::handle_accept(session_ptr session, const boost::system::error_code& error)$/;"	f	class:Connection
+handle_read_body	Session.cpp	/^void Session::handle_read_body(const boost::system::error_code& error)$/;"	f	class:Session
+handle_read_header	Session.cpp	/^void Session::handle_read_header(const boost::system::error_code& error)$/;"	f	class:Session
+handle_write	Session.cpp	/^void Session::handle_write(const boost::system::error_code& error)$/;"	f	class:Session
+header_length	chat_message.hpp	/^	enum { header_length = 4 };$/;"	e	enum:chat_message::__anon1
+io_service_	Connection.hpp	/^		boost::asio::io_service& io_service_;$/;"	m	class:Connection
+join	Room.cpp	/^void Room::join(paticipant_ptr paticipant)$/;"	f	class:Room
+leave	Room.cpp	/^void Room::leave(paticipant_ptr paticipant)$/;"	f	class:Room
+length	chat_message.hpp	/^	size_t length() const$/;"	f	class:chat_message
+main	main.cpp	/^int main(int argc, char* argv[])$/;"	f
+max_body_length	chat_message.hpp	/^	enum { max_body_length = 532 };$/;"	e	enum:chat_message::__anon2
+max_msgs	Room.hpp	/^		enum {max_msgs = 100};$/;"	e	enum:Room::__anon3
+messages	Room.hpp	/^		Paticipant::chat_message_queue messages;$/;"	m	class:Room
+paticipant_ptr	Room.hpp	/^		typedef boost::shared_ptr<Paticipant> paticipant_ptr;$/;"	t	class:Room
+paticipants_	Room.hpp	/^		std::set<paticipant_ptr> paticipants_;$/;"	m	class:Room
+read_msg_	Session.hpp	/^		chat_message read_msg_;$/;"	m	class:Session
+room_	Connection.hpp	/^		Room room_;$/;"	m	class:Connection
+room_	Session.hpp	/^		Room& room_;$/;"	m	class:Session
+session_ptr	Connection.hpp	/^		typedef boost::shared_ptr<Session> session_ptr;$/;"	t	class:Connection
+socket	Session.cpp	/^tcp::socket&  Session::socket()$/;"	f	class:Session
+socket_	Session.hpp	/^		tcp::socket socket_;$/;"	m	class:Session
+start	Session.cpp	/^void Session::start()$/;"	f	class:Session
+write_msgs_	Session.hpp	/^		chat_message_queue write_msgs_;$/;"	m	class:Session
+~Paticipant	Paticipant.hpp	/^		virtual ~Paticipant(){}$/;"	f	class:Paticipant
